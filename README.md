@@ -12,3 +12,33 @@
   <li>cantidadColumnas</li>
   <li>datos: Array de objetos. Cada fila/registro será un objeto, con los encabezados de las columnas como nombres de propiedades.</li>
 </ul>
+
+<p>Ejemplo:</p>
+
+<pre><code>
+{
+  "nombreArchivo": "Listado Productos",
+  "nombresHojas": ["Celulares", "Cámaras", "Televisores"],
+  "hojaConsultada": "Celulares",
+  "cantidadFilas": "102",
+  "cantidadColumnas": "6",
+  "datos": [
+    {
+      "idCelular": "CEL_0001",
+      "marca": "Apple ",
+      "modelo": "iPhone 11",
+      "precio": "$699",
+      "lanzamiento": "2019",
+      "imagen": "https://i.ibb.co/6n3FBS7/image.png"
+    },
+    {
+      "idCelular": "CEL_0002",
+      "marca": "Apple ",
+      "modelo": "iPhone 11 Pro Max",
+      "precio": "$1099",
+      "lanzamiento": "2019",
+      "imagen": "https://i.ibb.co/smkq4bC/image.png"
+    },
+  ]
+}
+</pre></code>
