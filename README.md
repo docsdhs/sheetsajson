@@ -65,5 +65,21 @@
       <td>2019</td>
       <td>https://i.ibb.co/6n3FBS7/image.png</td>
     </tr>
+    <tr>
+      <td>CEL_0002</td>
+      <td>Apple</td>
+      <td>iPhone 11 Pro Max</td>
+      <td>$1099</td>
+      <td>2019</td>
+      <td>https://i.ibb.co/smkq4bC/image.png</td>
+    </tr>
+    <tr>
+      <td>CEL_0003</td>
+      <td>Google</td>
+      <td>Pixel 5</td>
+      <td>$699</td>
+      <td>2020</td>
+      <td>https://i.ibb.co/FYRDkCJ/image.png</td>
+    </tr>
   </tbody>
 </table>
