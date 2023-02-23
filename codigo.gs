@@ -16,7 +16,7 @@ function doGet(e) {
   var encabezadosColumnas = hojaConsultar.getRange(1,1,1,cantidadColumnas).getValues()[0];
   var datosCrudos = hojaConsultar.getRange(2, 1, cantidadFilas, cantidadColumnas).getValues();
 
-  // Mapear arrays de objetos simples a un array de objetos
+  // Mapear arrays simples a un array de objetos
 
   var misDatos = datosCrudos.map((fila) =>
     encabezadosColumnas.reduce((o, h, j) => Object.assign(o, { [h]: fila[j] }), {})
