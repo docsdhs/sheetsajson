@@ -94,19 +94,31 @@
 
 <h2>Parámetros para el <i>queryString</i></h2>
 <p>Puedes usar los parámetros <i>hoja</i> y <i>columnaFiltro</i> + <i>criterioFiltro</i> a la hora de construir una consulta.</p>
-<h4>Selección de hoja</h4>
+
+<h3>Selección de hoja</h3>
+
 <p>Por defecto, el script entrega datos de la primera hoja del archivo, pero puedes especificar la hoja deseada según su nombre de la siguiente manera:</p>
 
 <pre><code>https://script.google.com/macros/s/......./exec?hoja=Celulares</pre></code>
 <pre><code>https://script.google.com/macros/s/......./exec?hoja=Televisores</pre></code>
 
-<h4>Filtros</h4>
+<i>Si indicas una hoja que no existe en el archivo, recibirás un mensaje de error.</i>
+
+<h3>Filtros</h3>
+
 <p>Puedes filtrar los datos que se obtendrán en la consulta especificando una <i>columnaFiltro</i> y el <i>criterioFiltro</i> que deben cumplir los valores de cada fila en <i>esa</i> columna para "pasar" el filtro.</p> 
+
 <p>Por ejemplo, para obtener los celulares de la marca Google:</p>
+
 <pre><code>https://script.google.com/macros/s/......./exec?columnaFiltro=marca&criterioFiltro=Google</pre></code>
+
 <p>Para obtener un celular según su "id"</p>
+
 <pre><code>https://script.google.com/macros/s/......./exec?columnaFiltro=idCelular&criterioFiltro=CEL_0005</pre></code>
-<i>Ten en cuenta que por más que tu filtro sea muy "puntual" y entregue un único resultado, el valor de "datos" siempre será un array de objetos, aunque tenga un solo elemento.</i>
+
+<p><i>Ten en cuenta que por más que tu filtro sea muy "puntual" y entregue un único resultado, el valor de "datos" siempre será un array de objetos, aunque tenga un solo elemento.</i></p>
+<p><i>Si indicas una columnaFiltro que no se encuentra en la hoja consultada, recibirás un mensaje de error. Si especificas una columna válida pero olvidas determinar el valor para criterioFiltro, también se producirá un error.</i></p>
+
 <hr>
 
 <h2>Limitaciones</h2>
