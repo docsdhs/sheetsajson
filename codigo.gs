@@ -1,34 +1,73 @@
 // Creado por Digital House Schools para demostrar uso de Hojas de Cálculo como fuente de datos para páginas web simples.
 
 function doGet(e) {
-
   var miArchivo = SpreadsheetApp.getActiveSpreadsheet();
   var nombreArchivo = miArchivo.getName();
   var hojasDelArchivo = miArchivo.getSheets();
   var nombresHojas = hojasDelArchivo.map(hoja => hoja.getName());
 
-  var hojaConsultar = hojasDelArchivo[0];
-  var nombreHojaConsultar = nombresHojas[0];
+  var mensaje = "Consulta realizada exitosamente";
 
-  var cantidadColumnas = hojaConsultar.getLastColumn();
-  var cantidadFilas = hojaConsultar.getLastRow()-1;
+  var hojaConsultar;
+  if(e && e.parameter && e.parameter.hoja){
+    hojaConsultar = hojasDelArchivo.find(hoja=>hoja.getName().toLowerCase() == e.parameter.hoja.toLowerCase())
+  } else {
+    hojaConsultar = hojasDelArchivo[0];
+  }
+  
+  var nombreHojaConsultar;
+  if(hojaConsultar != undefined){
+    nombreHojaConsultar = hojaConsultar.getName();
+    var cantidadColumnas = hojaConsultar.getLastColumn();
+    var cantidadFilas = hojaConsultar.getLastRow()-1;
+    var encabezadosColumnas = hojaConsultar.getRange(1,1,1,cantidadColumnas).getValues()[0];
+    var datosCrudos = hojaConsultar.getRange(2, 1, cantidadFilas, cantidadColumnas).getValues();
+    
+    // Mapear arrays de objetos simples a un array de objetos
+    var misDatos = datosCrudos.map((fila) =>
+      encabezadosColumnas.reduce((o, h, j) => Object.assign(o, { [h]: fila[j] }), {})
+    );
 
-  var encabezadosColumnas = hojaConsultar.getRange(1,1,1,cantidadColumnas).getValues()[0];
-  var datosCrudos = hojaConsultar.getRange(2, 1, cantidadFilas, cantidadColumnas).getValues();
-
-  // Mapear arrays simples a un array de objetos
-
-  var misDatos = datosCrudos.map((fila) =>
-    encabezadosColumnas.reduce((o, h, j) => Object.assign(o, { [h]: fila[j] }), {})
-  );
+    var misDatosFinales = [];
+    var columnaFiltro;
+    if(e && e.parameter && e.parameter.columnaFiltro){
+      columnaFiltro = e.parameter.columnaFiltro;
+    }
+    var criterioFiltro;
+    if(e && e.parameter && e.parameter.criterioFiltro){
+      criterioFiltro = e.parameter.criterioFiltro;
+    }
+    if(columnaFiltro != undefined){
+      if(encabezadosColumnas.includes(e.parameter.columnaFiltro)){
+        if(criterioFiltro != undefined){
+          console.log(criterioFiltro);
+          misDatosFinales = misDatos.filter(fila => fila[columnaFiltro].trim().toLowerCase() === criterioFiltro.toLowerCase());
+          console.log(misDatosFinales);
+        } else {
+          mensaje = "Error: se especificó una columnaFiltro pero no un criterioFiltro";
+        }
+      } 
+      else{
+        mensaje = "Error: columna " + columnaFiltro + " no encontrada en la hoja " + nombreHojaConsultar;
+      }
+    } else {
+      // No se pasó el parámetro "columnaFiltro"
+      misDatosFinales = misDatos;
+    }
+  } else {
+    nombreHojaConsultar = e.parameter.hoja;
+    mensaje = "Error: hoja " + nombreHojaConsultar + " no encontrada en el archivo";
+  }
 
   var respuesta = {
+    mensaje: mensaje,
     nombreArchivo: nombreArchivo,
     nombresHojas: nombresHojas,
     hojaConsultada: nombreHojaConsultar,
-    cantidadFilas: cantidadFilas,
+    nombresColumnas: encabezadosColumnas,
     cantidadColumnas: cantidadColumnas,
-    datos: misDatos
+    cantidadFilas: cantidadFilas,
+    datos: misDatosFinales
   };
 
   console.log(respuesta);
