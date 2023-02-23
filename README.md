@@ -15,7 +15,8 @@
 
 <p>Ejemplo:</p>
 
-<pre><code>
+<pre>
+<code>
 {
   "nombreArchivo": "Listado Productos",
   "nombresHojas": ["Celulares", "Cámaras", "Televisores"],
@@ -41,7 +42,8 @@
     },
   ]
 }
-</pre></code>
+</pre>
+</code>
 
 <p><i>El ejemplo está basado en una  tabla como esta:</i></p>
 
