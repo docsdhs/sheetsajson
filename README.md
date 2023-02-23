@@ -41,9 +41,7 @@
       "imagen": "https://i.ibb.co/smkq4bC/image.png"
     },
   ]
-}
-</pre>
-</code>
+}</pre></code>
 
 <p><i>El ejemplo está basado en una  tabla como esta:</i></p>
 
