@@ -3,7 +3,7 @@
 
 <p>Simplemente debes copiar los contenidos del archivo codigo.gs a un Proyecto de Apps Script vinculado a tu Hoja de Cálculo e "Implementarlo" como "Aplicación Web" (debe poder ser ejecutada por "Cualquier Usuario").</p>
 
-<p>La consulta simple a la URL generada devolverá un JSON con las siguiente estructura:</p>
+<p>La consulta simple a la URL generada devolverá un JSON con la siguiente estructura:</p>
 <ul>
   <li>nombreArchivo: Nombre del Archivo Consultado</li>
   <li>hojasArchivo: Array de nombres de hojas que contiene el archivo</li>
