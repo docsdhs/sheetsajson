@@ -42,3 +42,28 @@
   ]
 }
 </pre></code>
+
+<p><i>El ejemplo está basado en una  tabla como esta:</i></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>idCelular</th>
+      <th>marca</th>
+      <th>modelo</th>
+      <th>precio</th>
+      <th>lanzamiento</th>
+      <th>imagen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CEL_0001</td>
+      <td>Apple</td>
+      <td>Iphone 11</td>
+      <td>$699</td>
+      <td>2019</td>
+      <td>https://i.ibb.co/6n3FBS7/image.png</td>
+    </tr>
+  </tbody>
+</table>
