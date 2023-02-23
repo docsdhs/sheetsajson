@@ -1,4 +1,5 @@
 # sheetsajson
+<article>
 <p>Extracto de código que permite configurar un endpoint de consulta de datos para cualquier Hoja de Cálculo de Google.</p>
 
 <p>Simplemente debes copiar los contenidos del archivo codigo.gs a un Proyecto de Apps Script vinculado a tu Hoja de Cálculo e "Implementarlo" como "Aplicación Web" (debe poder ser ejecutada por "Cualquier Usuario").</p>
@@ -14,8 +15,9 @@
   <li>cantidadColumnas</li>
   <li>datos: Array de objetos. Cada fila/registro será un objeto, con los encabezados de las columnas como nombres de propiedades.</li>
 </ul>
-
+</article>
 <hr>
+<article>
 <h2>Ejemplo uso simple</h2>
 <i>Caso de uso sin parámetros especiales - con la URL tal cual es generada por Apps Script</i>
 <br><br>
@@ -90,7 +92,11 @@
   </tbody>
 </table>
 
+</article>
+
 <hr>
+
+<article>
 
 <h2>Parámetros para el <i>queryString</i></h2>
 <p>Puedes usar los parámetros <i>hoja</i> y <i>columnaFiltro</i> + <i>criterioFiltro</i> a la hora de construir una consulta.</p>
@@ -119,10 +125,13 @@
 <p><i>Ten en cuenta que por más que tu filtro sea muy "puntual" y entregue un único resultado, el valor de "datos" siempre será un array de objetos, aunque tenga un solo elemento.</i></p>
 <p><i>Si indicas una columnaFiltro que no se encuentra en la hoja consultada, recibirás un mensaje de error. Si especificas una columna válida pero olvidas determinar el valor para criterioFiltro, también se producirá un error.</i></p>
 
+</article>
+
 <hr>
 
+<aside>
 <h2>Limitaciones</h2>
-<p>Al ejecutar un script de Apps Script, estarás sujeto a las <a href="https://developers.google.com/apps-script/guides/services/quotas?hl=es-419">limitaciones de los servicios gratuitos de Google</a>. Por ejemplo, este tipo de scripts soportan únicamente 30 ejecuciones en simultáneo (pedidos concurrentes). Para páginas web que deban brindar servicios de gran escala, es recomendable explorar otras opciones. Pasarse de los límites no generará ninguna penalización de parte de Google ni un cargo económico: el script simplemente dejará de funcionar informando el exceso.</p>
+<p>Al ejecutar un script de Apps Script, estarás sujeto a las <a href="https://developers.google.com/apps-script/guides/services/quotas?hl=es-419" target="_blank">limitaciones de los servicios gratuitos de Google</a>. Por ejemplo, este tipo de scripts soportan únicamente 30 ejecuciones en simultáneo (pedidos concurrentes). Para páginas web que deban brindar servicios de gran escala, es recomendable explorar otras opciones. Pasarse de los límites no generará ninguna penalización de parte de Google ni un cargo económico: el script simplemente dejará de funcionar informando el exceso.</p>
 
 <h4>Seguridad</h4>
 <p>El código del script realiza únicamente acciones de "lectura" de datos, y solamente puede actuar sobre el archivo en el que fue instalado.</p>
@@ -131,3 +140,15 @@
   <li>Si dejas la URL visible en algún archivo "de front-end" (como un script del lado de cliente), otras personas podrán copiarla y usarla. Teniendo la URL <b>no</b> podrán ver el código de tu script, ni modificar las acciones que realiza, ni acceder a la hoja de cálculo original, pero podrán ejecutar la consulta desde otros entornos y ver todos los datos que puede entregar.</li>
   <li>Además, al ejecutar las consultas, podrán afectar la medición de tu 'uso' del servicio con respecto a los límites/cuotas establecidos por Google y generarte un "exceso" no previsto.</li>
 </ul>
+<p>Para que el script funcione <b>no</b> es necesario hacer pública la Hoja de Cálculo original, ni compartir <i>el proyecto de Apps Script</i> con otros usuarios: solamente se habilita para "cualquier usuario" la implementación como Web App.</p>
+<p>Si das permiso de <i>edición</i> de tu proyecto de Apps Script a otros usuarios, puedes correr riesgos inapropiados ya que podrían modificar el modo de comportarse de tu programa y, dado que el proyecto contará con permisos sobre tu cuenta, podrían modificar elementos que no deberían modificarse.</p>
+<p>Por estos mismos motivos, te recomendamos que <b>no</b> modifiques el código del proyecto a menos que tengas la seguridad del objetivo y el alcance de las modificaciones que realices. Digital House Schools no se hace responsable por los daños ocurridos por el mal uso del código sugerido en este repositorio, ni por los daños ocurridos por no atender a las advertencias hechas en esta documentación.</p>
+<p>Si deseas conocer más sobre los alcances de los distintos tipos de permisos que se otorgan a los proyectos de Apps Script sobre las cuentas de los usuarios, puedes visitar la <a href="https://developers.google.com/apps-script/concepts/scopes" target="_blank">documentación oficial de Google</a>.</p>
+
+</aside>
+
+<hr>
+
+<footer>
+  <p><b>Creado por <a href="https://www.digitalhouse.com/ar/productos/escuelas">Digital House Schools</a>.</b></p>
+</footer>
