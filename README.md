@@ -150,5 +150,5 @@
 <hr>
 
 <footer>
-  <p><b>Creado por <a href="https://www.digitalhouse.com/ar/productos/escuelas">Digital House Schools</a>.</b></p>
+  <p><b>Creado por <a href="https://www.digitalhouse.com/ar/productos/escuelas" target="_blank">Digital House Schools</a>.</b></p>
 </footer>
