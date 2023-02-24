@@ -141,7 +141,7 @@
   <li>Además, al ejecutar las consultas, podrán afectar la medición de tu 'uso' del servicio con respecto a los límites/cuotas establecidos por Google y generarte un "exceso" no previsto.</li>
 </ul>
 <p>Para que el script funcione <b>no</b> es necesario hacer pública la Hoja de Cálculo original, ni compartir <i>el proyecto de Apps Script</i> con otros usuarios: solamente se habilita para "cualquier usuario" la implementación como Web App.</p>
-<p>Si das permiso de <i>edición</i> de tu proyecto de Apps Script a otros usuarios, puedes correr riesgos inapropiados ya que podrían modificar el modo de comportarse de tu programa y, dado que el proyecto contará con permisos sobre tu cuenta, podrían modificar elementos que no deberían modificarse.</p>
+<p>Evita dar permiso de <i>edición</i> de tu proyecto de Apps Script a otros usuarios, puedes correr riesgos inapropiados ya que podrían modificar el modo de comportarse de tu programa y, dado que el proyecto contará con permisos sobre tu cuenta, podrían modificar elementos que no deberían modificarse.</p>
 <p>Por estos mismos motivos, te recomendamos que <b>no</b> modifiques el código del proyecto a menos que tengas la seguridad del objetivo y el alcance de las modificaciones que realices. Digital House Schools no se hace responsable por los daños ocurridos por el mal uso del código sugerido en este repositorio, ni por los daños ocurridos por no atender a las advertencias hechas en esta documentación.</p>
 <p>Si deseas conocer más sobre los alcances de los distintos tipos de permisos que se otorgan a los proyectos de Apps Script sobre las cuentas de los usuarios, puedes visitar la <a href="https://developers.google.com/apps-script/concepts/scopes" target="_blank">documentación oficial de Google</a>.</p>
 
