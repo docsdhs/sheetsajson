@@ -2,7 +2,7 @@
 <article>
 <p>Extracto de código que permite configurar un endpoint de consulta de datos para cualquier Hoja de Cálculo de Google.</p>
 
-<p>Simplemente debes copiar los contenidos del archivo codigo.gs a un Proyecto de Apps Script vinculado a tu Hoja de Cálculo e "Implementarlo" como "Aplicación Web". <i>Para uso en páginas web simples, se debe seleccionar la opción "Cualquier Usuario" al configurar el campo "¿Quién tiene acceso?" (a la implementación como Web App - no al archivo de Apps Script)</i>.</p>
+<p>Simplemente debes copiar los contenidos del archivo codigo.gs a un Proyecto de Apps Script vinculado a tu Hoja de Cálculo e "Implementarlo" como "Aplicación Web". <i>Para uso en páginas web simples, se debe seleccionar la opción "Cualquier Usuario" al configurar el campo "¿Quién tiene acceso?" (se trata de un acceso a la implementación como Web App - no al archivo de Apps Script ni la Hoja de Cálculo)</i>.</p>
 <h5>Estructura de respuestas</h5>
 <p>La consulta simple a la URL generada devolverá un JSON con la siguiente estructura:</p>
 <ul>
