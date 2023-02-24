@@ -34,7 +34,7 @@
   "datos": [
     {
       "idCelular": "CEL_0001",
-      "marca": "Apple ",
+      "marca": "Apple",
       "modelo": "iPhone 11",
       "precio": "$699",
       "lanzamiento": "2019",
@@ -42,7 +42,7 @@
     },
     {
       "idCelular": "CEL_0002",
-      "marca": "Apple ",
+      "marca": "Apple",
       "modelo": "iPhone 11 Pro Max",
       "precio": "$1099",
       "lanzamiento": "2019",
