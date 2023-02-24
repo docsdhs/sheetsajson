@@ -4,7 +4,7 @@
 
 <p>Simplemente debes copiar los contenidos del archivo codigo.gs a un Proyecto de Apps Script vinculado a tu Hoja de Cálculo e "Implementarlo" como "Aplicación Web". <i>Para uso en páginas web simples, se debe seleccionar la opción "Cualquier Usuario" al configurar el campo "¿Quién tiene acceso?" (se trata de un acceso a la implementación como Web App - no al archivo de Apps Script ni la Hoja de Cálculo)</i>.</p>
 <h5>Estructura de respuestas</h5>
-<p>La consulta simple a la URL generada devolverá un JSON con la siguiente estructura:</p>
+<p>La consulta simple a la URL que se genera al completar la implementación devolverá un JSON con la siguiente estructura:</p>
 <ul>
   <li>mensaje: Mensaje de status de realización de la consulta (éxito/fracaso/errores)</li>
   <li>nombreArchivo: Nombre del Archivo Consultado</li>
