@@ -40,9 +40,13 @@ function doGet(e) {
     if(columnaFiltro != undefined){
       if(encabezadosColumnas.includes(e.parameter.columnaFiltro)){
         if(criterioFiltro != undefined){
-          console.log(criterioFiltro);
-          misDatosFinales = misDatos.filter(fila => fila[columnaFiltro].trim().toLowerCase() === criterioFiltro.toLowerCase());
-          console.log(misDatosFinales);
+          misDatosFinales = misDatos.filter(fila => {
+            let datoEnFila = fila[columnaFiltro];
+            if(typeof datoEnFila === "string"){
+              datoEnFila = datoEnFila.trim().toLowerCase();
+            }
+            datoEnFila == criterioFiltro.toLowerCase()
+          });
         } else {
           mensaje = "Error: se especificó una columnaFiltro pero no un criterioFiltro";
         }
@@ -70,7 +74,6 @@ function doGet(e) {
     datos: misDatosFinales
   };
 
-  console.log(respuesta);
 
   return ContentService.createTextOutput(JSON.stringify(respuesta)).setMimeType(ContentService.MimeType.JSON);
 
