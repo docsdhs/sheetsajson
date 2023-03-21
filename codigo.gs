@@ -45,7 +45,7 @@ function doGet(e) {
             if(typeof datoEnFila === "string"){
               datoEnFila = datoEnFila.trim().toLowerCase();
             }
-            datoEnFila == criterioFiltro.toLowerCase()
+            return datoEnFila == criterioFiltro.toLowerCase()
           });
         } else {
           mensaje = "Error: se especificó una columnaFiltro pero no un criterioFiltro";
